@@ -1,5 +1,9 @@
 # Project Manager's Dashboard
 
+## 🌐 Live Demo
+
+**Deployed Site**: [https://roc-8-assignment-pied.vercel.app/](https://roc-8-assignment-pied.vercel.app/)
+
 ## Project Overview
 
 A sophisticated frontend dashboard application for project management, developed as part of the ROC-8 Frontend Assignment. The dashboard provides a comprehensive view of project statuses, team performance, revenue, and budget tracking.
