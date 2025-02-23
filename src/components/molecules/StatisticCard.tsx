@@ -10,12 +10,12 @@ type StatisticCardProps = {
 export const StatisticCard = ({ title, value, icon, variant = 'default' }: StatisticCardProps) => {
   return (
     <div className={cn(
-      'p-6 rounded-xl bg-white shadow-sm', // Updated padding and added shadow
+      'p-6 rounded-xl bg-white shadow-sm',
       variant === 'danger' ? 'bg-red-50' : 'bg-white'
     )}>
       <div className="flex items-center gap-4">
         <div className={cn(
-          'p-3 rounded-xl', // Increased padding
+          'p-3 rounded-xl',
           variant === 'danger' ? 'bg-red-100' : 'bg-gray-50'
         )}>
           {icon}

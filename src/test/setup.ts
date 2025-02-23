@@ -1,4 +1,3 @@
-// src/test/setup.ts
 import { expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import { 
@@ -7,13 +6,11 @@ import {
 } from '@testing-library/jest-dom/matchers';
 import { vi } from 'vitest';
 
-// Extend Vitest's expect method
 expect.extend({
   toBeInTheDocument,
   toHaveClass,
 });
 
-// Add custom matchers to TypeScript
 declare module 'vitest' {
   interface Assertion<T> {
     toBeInTheDocument(): Assertion<T>;
@@ -25,26 +22,22 @@ declare module 'vitest' {
   }
 }
 
-// Mock react-hooks
 vi.mock('@testing-library/react-hooks', () => ({
   renderHook: vi.fn(),
   act: vi.fn(),
   waitFor: vi.fn(),
 }));
 
-// Cleanup after each test case
 afterEach(() => {
   cleanup();
 });
 
-// Mock ResizeObserver
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
 
-// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: vi.fn().mockImplementation(query => ({

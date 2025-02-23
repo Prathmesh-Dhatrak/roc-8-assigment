@@ -24,7 +24,6 @@ export const BudgetChart = ({ data }: BudgetChartProps) => {
       <CardContent className="flex flex-col items-center">
         <div className="relative w-48 h-48">
           <svg className="w-full h-full transform -rotate-90">
-            {/* Under Budget */}
             <circle
               cx="96"
               cy="96"
@@ -35,7 +34,6 @@ export const BudgetChart = ({ data }: BudgetChartProps) => {
               strokeDasharray={getStrokeDasharray(underBudgetPercentage)}
               className="relative z-30"
             />
-            {/* On Budget */}
             <circle
               cx="96"
               cy="96"
@@ -47,7 +45,6 @@ export const BudgetChart = ({ data }: BudgetChartProps) => {
               strokeDashoffset={`${-(2 * Math.PI * 40 * underBudgetPercentage) / 100}`}
               className="relative z-20"
             />
-            {/* Over Budget */}
             <circle
               cx="96"
               cy="96"

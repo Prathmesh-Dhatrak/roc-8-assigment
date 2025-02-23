@@ -14,7 +14,7 @@ export const TeamSection = ({ members }: TeamSectionProps) => {
       </CardHeader>
       <CardContent className="space-y-4">
         {members.map((member, index) => {
-          const AvatarIcon = member.avatar; // Get the icon component
+          const AvatarIcon = member.avatar;
           return (
             <motion.div
               key={member.id}
@@ -23,7 +23,7 @@ export const TeamSection = ({ members }: TeamSectionProps) => {
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50"
             >
-              <AvatarIcon className="w-10 h-10 text-gray-500" /> {/* Render the icon */}
+              <AvatarIcon className="w-10 h-10 text-gray-500" />
               <div className="flex-1">
                 <h4 className="text-sm font-medium">{member.name}</h4>
                 <p className="text-xs text-gray-500">{member.role}</p>

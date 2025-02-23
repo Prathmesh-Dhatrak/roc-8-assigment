@@ -78,7 +78,6 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
             className="bg-white rounded-lg p-6 shadow-sm"
           >
             <div className="grid grid-cols-[auto,1fr,auto] gap-8 items-center">
-              {/* Project Info */}
               <div className="flex items-center gap-3">
                 {renderTeamAvatar(project)}
                 <div>
@@ -87,7 +86,6 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
                 </div>
               </div>
 
-              {/* Budget Info */}
               <div className="grid grid-cols-3 gap-8">
                 <div>
                   <p className="text-sm text-gray-500">Total Budget</p>
@@ -106,14 +104,11 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
                   <p className="font-medium">{project.actualHours}</p>
                 </div>
               </div>
-
-              {/* Status Icon */}
               <div>
                 {getStatusIcon(project.status)}
               </div>
             </div>
 
-            {/* Progress Bar */}
             <div className="mt-4">
               <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                 <div
