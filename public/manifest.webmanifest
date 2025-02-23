@@ -1,15 +1,16 @@
 {
-  "short_name": "Vital",
-  "name": "Starter template for Vite with React (TypeScript). Supports Tailwind with CSS-Modules. Jest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Husky, Commit-lint and Atomic Design for components.",
+  "short_name": "ProjectPulse",
+  "name": "Project Manager's Dashboard - ROC-8 Frontend Assignment",
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/svg+xml"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#111827",
-  "background_color": "#111827"
+  "theme_color": "#0EA5E9",
+  "background_color": "#ffffff",
+  "description": "A comprehensive dashboard for project management, tracking budgets, revenue, and team performance."
 }
