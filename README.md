@@ -77,7 +77,7 @@ src/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/roc-8-assignment.git
+git clone https://github.com/Prathmesh-Dhatrak/roc-8-assignment.git
 cd roc-8-assignment
 ```
 
