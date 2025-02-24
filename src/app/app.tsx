@@ -48,37 +48,37 @@ function App() {
   if (loading) {
     return (
       <DashboardLayout>
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {/* Main grid container */}
-          <div className="grid grid-cols-6 gap-6">
-            {/* Left section (5 columns) */}
-            <div className="col-span-5 space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 sm:gap-6">
+            {/* Left section */}
+            <div className="lg:col-span-5 space-y-4 sm:space-y-6">
               {/* Stats row */}
-              <div className="grid grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
                 {[...Array(5)].map((_, i) => (
-                  <Skeleton key={i} className="h-36 rounded-xl" />
+                  <Skeleton key={i} className="h-24 sm:h-32 lg:h-36 rounded-xl" />
                 ))}
               </div>
               {/* Charts row */}
-              <div className="grid grid-cols-5 gap-6">
-                <Skeleton className="col-span-3 h-[400px] rounded-xl" />
-                <Skeleton className="col-span-2 h-[400px] rounded-xl" />
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
+                <Skeleton className="lg:col-span-3 h-[300px] sm:h-[350px] lg:h-[400px] rounded-xl" />
+                <Skeleton className="lg:col-span-2 h-[300px] sm:h-[350px] lg:h-[400px] rounded-xl" />
               </div>
             </div>
-            {/* Right section (TeamSection - 1 column) */}
-            <div className="col-span-1">
-              <Skeleton className="h-[calc(100%-1.5rem)] rounded-xl" />
+            {/* Right section (TeamSection) */}
+            <div className="lg:col-span-1">
+              <Skeleton className="h-[200px] lg:h-[calc(100%-1.5rem)] rounded-xl" />
             </div>
           </div>
 
           {/* Projects Section */}
-          <div className="space-y-6">
-            <div className="flex gap-4">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               {[...Array(3)].map((_, i) => (
-                <Skeleton key={i} className="h-10 w-44 rounded-lg" />
+                <Skeleton key={i} className="h-10 w-full sm:w-44 rounded-lg" />
               ))}
             </div>
-            <Skeleton className="h-[600px] rounded-xl" />
+            <Skeleton className="h-[400px] sm:h-[500px] lg:h-[600px] rounded-xl" />
           </div>
         </div>
       </DashboardLayout>
@@ -87,54 +87,54 @@ function App() {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8">
+      <div className="space-y-4 sm:space-y-6 lg:space-y-8">
         {/* Main grid container */}
-        <div className="grid grid-cols-6 gap-6">
-          {/* Left section (5 columns) */}
-          <div className="col-span-5 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 sm:gap-6">
+          {/* Left section */}
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
             {/* Stats row */}
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
               <StatisticCard
                 title="Total Projects"
                 value={stats?.totalProjects || 0}
-                icon={<GridIcon className="w-6 h-6 text-gray-600" />}
+                icon={<GridIcon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />}
               />
               <StatisticCard
                 title="Completed"
                 value={stats?.completedProjects || 0}
-                icon={<CheckCircleIcon className="w-6 h-6 text-emerald-600" />}
+                icon={<CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />}
               />
               <StatisticCard
                 title="Ongoing"
                 value={stats?.ongoingProjects || 0}
-                icon={<RefreshCwIcon className="w-6 h-6 text-blue-600" />}
+                icon={<RefreshCwIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />}
               />
               <StatisticCard
                 title="Delayed"
                 value={stats?.delayedProjects || 0}
-                icon={<AlertTriangleIcon className="w-6 h-6 text-red-600" />}
+                icon={<AlertTriangleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />}
                 variant="danger"
               />
               <StatisticCard
                 title="Employees"
                 value={stats?.totalEmployees || 0}
-                icon={<UsersIcon className="w-6 h-6 text-gray-600" />}
+                icon={<UsersIcon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />}
               />
             </div>
             {/* Charts row */}
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
               <RevenueChart data={revenueData} />
               <BudgetChart data={budgetStatus!} />
             </div>
           </div>
-          {/* Right section (TeamSection - 1 column) */}
-          <div className="col-span-1">
+          {/* Right section (TeamSection) */}
+          <div className="lg:col-span-1">
             <TeamSection members={teamMembers} />
           </div>
         </div>
 
         {/* Projects Section */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <FilterSection onFilterChange={handleFilterChange} />
           <ProjectList projects={filteredProjects} />
         </div>
